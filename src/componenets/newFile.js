@@ -32,19 +32,11 @@ import {
     CSwitch
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import Spinner from '../UI/Spinner/Spinner';
 import { Redirect } from 'react-router-dom';
 
 const BasicForm = (props) => {
     const [collapsed, setCollapsed] = React.useState(true)
     const [showElements, setShowElements] = React.useState(true)
-    if (props.loading) {
-        form = <Spinner />
-    }
-    let redirect = null;
-    if (props.redirect) {
-        redirect = <Redirect to='/' />
-    }
     return (
         <>
             <CRow>
